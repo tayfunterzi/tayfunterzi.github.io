@@ -14,10 +14,6 @@ var standA = ['/standalone', ''][1]
 // Set clicked global measures
 var ssymb = d3.select('body')
     .style('background-color', '#000000')
-    //.style('background-image', 'url(.'+standA+'/misc/lighttextr2.png)')
-    .style('background-size', sqWiHei*1.04 + 'px ' + sqWiHei*1.04 + 'px')
-    .style('background-repeat', 'no-repeat')
-    .style('background-position', 'top center')
     .style('text-align', 'center')
     .append('svg');
 
@@ -53,7 +49,7 @@ ssymb.selectAll('.foots').data([0,1,2,3]).enter()
 			Transpr(0)
 			gPathsO = false
 		} else {
-			Transpr(.5)
+			Transpr(.35)
 			gPathsO = true
 		}
 		});
@@ -358,7 +354,7 @@ var stextd = [
 			'successfully discriminating between valid responders and invalid responders under',
 			'certain conditions. Indicators for optimal settings of large discriminatory power were',
 			'identified and limitations discussed.', ' ',
-			'(available via: <a xlink:href="http://etheses.lse.ac.uk/3532/" target="_blank" fill="#CE001C">LSE Thesis Online</a>, doi: <a xlink:href="http://dx.doi.org/10.21953/lse.ujium54l0s14" target="_blank" fill="'+colpTitle+'">10.21953/lse.ujium54l0s14</a>)'],
+			'(available via: <a xlink:href="http://etheses.lse.ac.uk/3532/" target="_blank" fill="#CE001C">LSE Thesis Online</a>, doi: <a xlink:href="http://dx.doi.org/10.21953/lse.ujium54l0s14" target="_blank" fill="'+colpTitle+'">10.21953/lse.ujium54l0s14</a>, <a xlink:href="./safiles/Terzi_PhD_Thesis.pdf" target="_blank" fill="'+colpTitle+'">local: pdf</a>)'],
 			y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">MSc Dissertation</tspan>'], y: stexty[3], yend: 0 },
 		{t:['Mediation analysis has been crucial for explaining physiologic as well as psychological',

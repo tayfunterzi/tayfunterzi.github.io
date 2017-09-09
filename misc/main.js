@@ -14,7 +14,7 @@ var standA = ['/standalone', ''][1]
 // Set clicked global measures
 var ssymb = d3.select('body')
     .style('background-color', '#000000')
-    .style('background-image', 'url(.'+standA+'/misc/lighttextr2.png)')
+    //.style('background-image', 'url(.'+standA+'/misc/lighttextr2.png)')
     .style('background-size', sqWiHei*1.04 + 'px ' + sqWiHei*1.04 + 'px')
     .style('background-repeat', 'no-repeat')
     .style('background-position', 'top center')

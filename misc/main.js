@@ -20,11 +20,11 @@ var nbsp = '&#160;'
 var standnbsp = ssymb
 	.append('text')
 	.attr('id', 'standnbsp')
-	.text(nbsp)
-	
+	.text('. .')
+
 var widthnbsp = standnbsp.node().getBBox().width
-	
-var sqWiHei = widthnbsp * 15; //SVG and Body Frame Square Frame Size
+
+var sqWiHei = widthnbsp * 55; //SVG and Body Frame Square Frame Size
 	
 var Gth = sqWiHei / 25;	//500 square px for svg
 

@@ -246,7 +246,7 @@ var stexty = [
 
 var tab1 = 10*rGth;
 
-var contactWhitespaces = new Array(86).join(' ') 
+var contactWhitespaces = new Array(86).join('&#160;') 
 
 var stextd = [
 	[

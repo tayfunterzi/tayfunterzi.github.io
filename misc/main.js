@@ -7,6 +7,8 @@ author = 'Tayfun Terzi';
 
 /* global d3 */
 
+var sqWiHei = 700; //SVG and Body Frame Square Frame Size
+
 var standA = ['/standalone', ''][1]
 
 // Set clicked global measures
@@ -14,17 +16,6 @@ var ssymb = d3.select('body')
     .style('background-color', '#000000')
     .style('text-align', 'center')
     .append('svg');
-	
-var nbsp = '&#160;'	
-	
-var standnbsp = ssymb
-	.append('text')
-	.attr('id', 'standnbsp')
-	.text('. .')
-
-var widthnbsp = standnbsp.node().getBBox().width
-
-var sqWiHei = widthnbsp * 55; //SVG and Body Frame Square Frame Size
 	
 var Gth = sqWiHei / 25;	//500 square px for svg
 
@@ -241,7 +232,8 @@ var stexty = [
 
 var tab1 = 10*rGth;
 
-var contactWhitespaces = new Array(86).join(nbsp)
+var nbsp = '&#160;';
+var halfwidth = Gtw / 2 - Gth 
 
 var stextd = [
 	[
@@ -433,20 +425,20 @@ var stextd = [
 	[
 		{t:['Contact'],                y:stexty[0], yend:0},
 		{t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">' + author + ', PhD</tspan>'],         y:stexty[1], yend:0},
-		{t:[contactWhitespaces + 'LinkedIn', ' ',
-		    contactWhitespaces + '<a xlink:href="https://www.linkedin.com/in/tayfunterzi" fill="' + colpTitle + '">https://www.linkedin.com/in/tayfunterzi</a>',
+		{t:['<tspan x="' + halfwidth + '">LinkedIn</tspan>', ' ',
+		    '<tspan x="' + halfwidth + '"><a xlink:href="https://www.linkedin.com/in/tayfunterzi" fill="' + colpTitle + '">https://www.linkedin.com/in/tayfunterzi</a></tspan>',
 		    nbsp, nbsp,
-		    contactWhitespaces + 'Github', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://github.com/tayfunterzi" fill="' + colpTitle + '">https://github.com/tayfunterzi</a>',
+		    '<tspan x="' + halfwidth + '">Github</tspan>', ' ', 
+		    '<tspan x="' + halfwidth + '"><a xlink:href="https://github.com/tayfunterzi" fill="' + colpTitle + '">https://github.com/tayfunterzi</a></tspan>',
 		    nbsp, nbsp,
-		    contactWhitespaces + 'Facebook', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://www.facebook.com/tayfunterzi" fill="' + colpTitle + '">https://www.facebook.com/tayfunterzi</a>',
+		    '<tspan x="' + halfwidth + '">Facebook</tspan>', ' ', 
+		    '<tspan x="' + halfwidth + '"><a xlink:href="https://www.facebook.com/tayfunterzi" fill="' + colpTitle + '">https://www.facebook.com/tayfunterzi</a></tspan>',
 		    nbsp, nbsp,
-		    contactWhitespaces + 'Twitter', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://twitter.com/tayfunterzi" fill="' + colpTitle + '">https://twitter.com/tayfunterzi</a>',
+		    '<tspan x="' + halfwidth + '">Twitter</tspan>', ' ', 
+		    '<tspan x="' + halfwidth + '"><a xlink:href="https://twitter.com/tayfunterzi" fill="' + colpTitle + '">https://twitter.com/tayfunterzi</a></tspan>',
 		    nbsp, nbsp,
-		    contactWhitespaces + 'Google+', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://plus.google.com/113954516928013701422" fill="' + colpTitle + '">https://plus.google.com/tayfunterzi</a>', 
+		    '<tspan x="' + halfwidth + '">Google+</tspan>', ' ', 
+		    '<tspan x="' + halfwidth + '"><a xlink:href="https://plus.google.com/113954516928013701422" fill="' + colpTitle + '">https://plus.google.com/tayfunterzi</a></tspan>', 
 		   ],   y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">Signature</tspan>'],          y:stexty[3], yend:0},
 		{t:['<tspan fill="' + colpHigh + '">Psychologist</tspan> (BSc, MSc)',
@@ -800,10 +792,14 @@ function gFoldun(pSel) {
 d3.select('#Tfooter').on('click', function() {gFoldun(NaN);});
 
 // Profile Picture
-var picheight =  stextd[5][2].yend - stextd[5][2].y + Geg
+var picheight =  stextd[5][2].yend - stextd[5][2].y + Geg;
+
+var picratio = 500 / 543;
+
+var picwidth = picratio * picheight;
 
 ssymb.select('#SectG5').append('image')
-    .attr('width', function () { return (500 / 543 * picheight); })
+    .attr('width', function () { return picwidth; })
     .attr('height', function () { return picheight; })
 	.attr('xlink:href', '.'+standA+'/misc/Tayfun_Terzi_Profile_Picture.jpg')
     .attr('transform', function (d) {

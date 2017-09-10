@@ -7,8 +7,6 @@ author = 'Tayfun Terzi';
 
 /* global d3 */
 
-var sqWiHei = 700; //SVG and Body Frame Square Frame Size
-
 var standA = ['/standalone', ''][1]
 
 // Set clicked global measures
@@ -16,7 +14,18 @@ var ssymb = d3.select('body')
     .style('background-color', '#000000')
     .style('text-align', 'center')
     .append('svg');
-
+	
+var nbsp = '&#160;'	
+	
+var standnbsp = ssymb
+	.append('text')
+	.attr('id', 'standnbsp')
+	.text(nbsp)
+	
+var widthnbsp = standnbsp.node().getBBox().width
+	
+var sqWiHei = widthnbsp * 15; //SVG and Body Frame Square Frame Size
+	
 var Gth = sqWiHei / 25;	//500 square px for svg
 
 var Gtw=25*Gth, Geg=1/3*Gth;
@@ -67,6 +76,8 @@ var sy = 1,         // y - unit
 // Global svg measurements
 var twidth  = Gtw;
 var theight = Gtw;
+
+
 
 ssymb.attr('viewBox', '0 0 ' + sqWiHei + ' ' + sqWiHei)
     .attr('preserveAspectRatio', 'xMinYMin slice')
@@ -229,7 +240,7 @@ var stexty = [
 ];
 
 var tab1 = 10*rGth;
-var nbsp = '&#160;'
+
 var contactWhitespaces = new Array(86).join(nbsp)
 
 var stextd = [

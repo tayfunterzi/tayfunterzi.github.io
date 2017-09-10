@@ -75,7 +75,7 @@ ssymb.attr('viewBox', '0 0 ' + sqWiHei + ' ' + sqWiHei)
     .style('font-family', 'Arial, Helvetica, sans-serif')
 	.attr('xmlns', 'http://www.w3.org/2000/svg')
 	.attr('xmlns:xlink', 'http://www.w3.org/1999/xlink')
-	.attr('xml:space', 'preserve')
+	//.attr('xml:space', 'preserve')
 	;
 
 // Line style properties
@@ -198,22 +198,6 @@ function roti(selection, dur) {
         });
 }
 
-// Data for Radial Gradient
-var rgradd = [
-    {o:0,   c:'#ffffff'},
-    {o:40,  c:'#ff0000'},
-    {o:100, c:'#000000'}
-];
-
-ssymb.append("defs")
-    .append("radialGradient")
-        .attr("id", "radial-gradient")
-        .selectAll('.rOffsets').data(rgradd).enter().append("stop")
-            .attr('id', function(d,i) {return 'Rof'+i;})
-            .attr('offset', function(d,i) {return d.o+'%';})
-            .attr('stop-color', function(d,i) {return d.c;}); 
-
-
 // Append unclicked lines
 Object.keys(slined).forEach(function(ni) {
     ssymb.append('g').attr('id','D'+ni).selectAll('lines')
@@ -245,8 +229,8 @@ var stexty = [
 ];
 
 var tab1 = 10*rGth;
-
-var contactWhitespaces = new Array(86).join('&#160;') 
+var nbsp = '&#160;'
+var contactWhitespaces = new Array(86).join(nbsp)
 
 var stextd = [
 	[
@@ -358,7 +342,7 @@ var stextd = [
 			'successfully discriminating between valid responders and invalid responders under',
 			'certain conditions. Indicators for optimal settings of large discriminatory power were',
 			'identified and limitations discussed.', ' ',
-			'(available via: <a xlink:href="http://etheses.lse.ac.uk/3532/" target="_blank" fill="' + colpHigh + '">LSE Thesis Online</a>, doi: <a xlink:href="http://dx.doi.org/10.21953/lse.ujium54l0s14" target="_blank" fill="'+colpTitle+'">10.21953/lse.ujium54l0s14</a>, <a xlink:href="./safiles/Tayfun_Terzi_PhD_Thesis.pdf" target="_blank" fill="'+colpTitle+'">local: pdf</a>)'],
+			'(available via: <a xlink:href="http://etheses.lse.ac.uk/3532/" target="_blank" fill="' + colpHigh + '">LSE Thesis Online</a>, doi: <a xlink:href="http://dx.doi.org/10.21953/lse.ujium54l0s14" target="_blank" fill="' + colpTitle + '">10.21953/lse.ujium54l0s14</a>, <a xlink:href="./safiles/Tayfun_Terzi_PhD_Thesis.pdf" target="_blank" fill="' + colpTitle + '">local: pdf</a>)'],
 			y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">MSc Dissertation</tspan>'], y: stexty[3], yend: 0 },
 		{t:['Mediation analysis has been crucial for explaining physiologic as well as psychological',
@@ -410,7 +394,7 @@ var stextd = [
 			],   y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">PsyCONNECT</tspan>'],          y:stexty[3], yend:0},
 		{t:['since May 2010<tspan x="'+tab1+'">Founder of the eLearning Project PsyCONNECT</tspan>', ' ',
-			'Online Platform<tspan x="'+tab1+'"><a xlink:href="http://www.psyconnect-frankfurt.de" target="_blank" fill="' + colpHigh + '">http://www.psyconnect-frankfurt.de</a></tspan>'
+		    'Online Platform<tspan x="'+tab1+'"><a xlink:href="http://www.psyconnect-frankfurt.de" target="_blank" fill="' + colpHigh + '">http://www.psyconnect-frankfurt.de</a></tspan>'
 			],
 		y:stexty[4], yend:0}
         ],
@@ -439,19 +423,19 @@ var stextd = [
 		{t:['Contact'],                y:stexty[0], yend:0},
 		{t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">' + author + ', PhD</tspan>'],         y:stexty[1], yend:0},
 		{t:[contactWhitespaces + 'LinkedIn', ' ',
-		    contactWhitespaces + '<a xlink:href="https://www.linkedin.com/in/tayfunterzi">https://www.linkedin.com/in/tayfunterzi</a>',
-		    ' ', ' ',
+		    contactWhitespaces + '<a xlink:href="https://www.linkedin.com/in/tayfunterzi" fill="' + colpTitle + '">https://www.linkedin.com/in/tayfunterzi</a>',
+		    nbsp, nbsp,
 		    contactWhitespaces + 'Github', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://github.com/tayfunterzi">https://github.com/tayfunterzi</a>',
-		    ' ', ' ',
+		    contactWhitespaces + '<a xlink:href="https://github.com/tayfunterzi" fill="' + colpTitle + '">https://github.com/tayfunterzi</a>',
+		    nbsp, nbsp,
 		    contactWhitespaces + 'Facebook', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://www.facebook.com/tayfunterzi">https://www.facebook.com/tayfunterzi</a>',
-		    ' ', ' ',
+		    contactWhitespaces + '<a xlink:href="https://www.facebook.com/tayfunterzi" fill="' + colpTitle + '">https://www.facebook.com/tayfunterzi</a>',
+		    nbsp, nbsp,
 		    contactWhitespaces + 'Twitter', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://twitter.com/tayfunterzi">https://twitter.com/tayfunterzi</a>',
-		    ' ', ' ',
+		    contactWhitespaces + '<a xlink:href="https://twitter.com/tayfunterzi" fill="' + colpTitle + '">https://twitter.com/tayfunterzi</a>',
+		    nbsp, nbsp,
 		    contactWhitespaces + 'Google+', ' ', 
-		    contactWhitespaces + '<a xlink:href="https://plus.google.com/113954516928013701422">https://plus.google.com/tayfunterzi</a>', 
+		    contactWhitespaces + '<a xlink:href="https://plus.google.com/113954516928013701422" fill="' + colpTitle + '">https://plus.google.com/tayfunterzi</a>', 
 		   ],   y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">Signature</tspan>'],          y:stexty[3], yend:0},
 		{t:['<tspan fill="' + colpHigh + '">Psychologist</tspan> (BSc, MSc)',

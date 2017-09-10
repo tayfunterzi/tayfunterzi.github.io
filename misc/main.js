@@ -24,6 +24,7 @@ var Gtw=25*Gth, Geg=1/3*Gth;
 //Set Intro Title Colours
 var colpTitle = '#CCCCCC';
 var colpKeys = ['#404040', '#E6E6E6'];
+var colpHigh= '#CE001C';
 
 // ON-CLICK FUNCTION
 var gRotate = false;
@@ -74,6 +75,7 @@ ssymb.attr('viewBox', '0 0 ' + sqWiHei + ' ' + sqWiHei)
     .style('font-family', 'Arial, Helvetica, sans-serif')
 	.attr('xmlns', 'http://www.w3.org/2000/svg')
 	.attr('xmlns:xlink', 'http://www.w3.org/1999/xlink')
+	.attr('xml:space', 'preserve')
 	;
 
 // Line style properties
@@ -143,7 +145,7 @@ var slined = {
                 {x: sc,         y:-sc*2,        a:{x:1,y:1}}
                 ]
             },
-    cpink:  {c: '#CE001C',      g: gn,          w: gw,
+    cpink:  {c: colpHigh,       g: gn,          w: gw,
              p: [
                 {x:-sc,         y:-sc+1,        a: gr},
                 {x: (sc+sy)/2,  y:(-sc+sy)/2,   a: gr},       
@@ -244,27 +246,29 @@ var stexty = [
 
 var tab1 = 10*rGth;
 
+var contactWhitespaces = new Array(86).join(' ') 
+
 var stextd = [
 	[
 		{t:['Work'],                   y:stexty[0], yend:0},
 		{t:['<tspan style="font-weight:bold">Experience</tspan>'],         y:stexty[1], yend:0},
 		{t: ['since Jun 2017<tspan x="' + tab1 + '">Citymapper</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="#CE001C">City Operations Hero</tspan></tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">City Operations Hero</tspan></tspan>',
 			' ',
 			'Oct 2015 - Oct 2016<tspan x="'+tab1+'">London School of Economics, Students’ Union (LSESU)</tspan>',
-            '<tspan style="font-style: italic" x="'+tab1+'">Elected Graduate Research/<tspan fill="#CE001C">PhD Students’ Officer</tspan></tspan>',
+            '<tspan style="font-style: italic" x="'+tab1+'">Elected Graduate Research/<tspan fill="' + colpHigh + '">PhD Students’ Officer</tspan></tspan>',
             ' ',
             'Aug 2013 - Jul 2014<tspan x="' + tab1 + '">London School of Economics (LSE), Department of Statistics</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="#CE001C">Graduate Teaching Assistant</tspan></tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">Graduate Teaching Assistant</tspan></tspan>',
             ' ',
             'Sep 2012 - Aug 2013<tspan x="' + tab1 + '">Goethe-University Frankfurt, Methodology Department</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '">Graduate Teaching Assistant &amp; <tspan fill="#CE001C">Research Assistant</tspan></tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '">Graduate Teaching Assistant &amp; <tspan fill="' + colpHigh + '">Research Assistant</tspan></tspan>',
             ' ',
 			'Jul 2012<tspan x="' + tab1 + '">Psychotherapy Practice Ullrich, Frankfurt</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="#CE001C">Website Designer</tspan> for <a xlink:href="http://www.psychotherapie-ullrich.de" target="_blank" fill="'+colpTitle+'">psychotherapie-ullrich.de</a></tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">Website Designer</tspan> for <a xlink:href="http://www.psychotherapie-ullrich.de" target="_blank" fill="'+colpTitle+'">psychotherapie-ullrich.de</a></tspan>',
             ' ',
             'since May 2010<tspan x="' + tab1 + '">Project PsyCONNECT</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="#CE001C">Project Founder</tspan> &amp; Coordinator, Organisational Development</tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">Project Founder</tspan> &amp; Coordinator, Organisational Development</tspan>',
             ' ',
             'May 2009 - Jun 2010<tspan x="' + tab1 + '">Goethe-University, Differential Psychology &amp; Diagnostics</tspan>',
             '<tspan style="font-style: italic" x="' + tab1 + '">Research Assistant, IT Consultant, &amp; SSLC Representative</tspan>',
@@ -278,7 +282,7 @@ var stextd = [
             '<tspan style="font-style: italic" x="' + tab1 + '">Research Assistant for the Work- &amp; Organisational Psychology Group</tspan>',
             ' ',
             'Jul 2011 - Oct 2011<tspan x="' + tab1 + '">PAConsulting Group (German HQ Frankfurt)</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="#CE001C">Consultant in Business Transformation</tspan> for the Analytics Team in Paris</tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">Consultant in Business Transformation</tspan> for the Analytics Team in Paris</tspan>',
             ' ',
             'Aug 2010 - Oct 2010<tspan x="' + tab1 + '">Working Group Diagnostics and Evaluation Frankfurt</tspan>',
             '<tspan style="font-style: italic" x="' + tab1 + '">Design and Co-moderation of Job Assessment Workshops</tspan>',
@@ -291,28 +295,28 @@ var stextd = [
 	[
 		{t:['Education'],              y:stexty[0], yend:0},
 		{t:['<tspan style="font-weight:bold">Academia</tspan>'],         y:stexty[1], yend:0},
-		{t:['Oct 2013 - Jun 2017<tspan x="'+tab1+'"><tspan style="font-weight:bold" fill="#CE001C">L</tspan>ondon <tspan style="font-weight:bold" fill="#CE001C">S</tspan>chool of <tspan style="font-weight:bold" fill="#CE001C">E</tspan>conomics and Political Science</tspan>',
-            '<tspan style="font-style: italic" x="'+tab1+'" fill="#CE001C">PhD in Statistics</tspan>',
+		{t:['Oct 2013 - Jun 2017<tspan x="'+tab1+'"><tspan style="font-weight:bold" fill="' + colpHigh + '">L</tspan>ondon <tspan style="font-weight:bold" fill="' + colpHigh + '">S</tspan>chool of <tspan style="font-weight:bold" fill="' + colpHigh + '">E</tspan>conomics and Political Science</tspan>',
+            '<tspan style="font-style: italic" x="'+tab1+'" fill="' + colpHigh + '">PhD in Statistics</tspan>',
             ' ',
             'Aug 2011 - Aug 2013<tspan x="' + tab1 + '">Goethe-University Frankfurt</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '" fill="#CE001C">MSc in Psychology (distinction)</tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '" fill="' + colpHigh + '">MSc in Psychology (distinction)</tspan>',
 			'<tspan x="' + tab1 + '">Specialised in Statistics and Social Research Methodology</tspan>',
             ' ',
             'Feb 2012 - Aug 2012<tspan x="' + tab1 + '">Aston Business School Birmingham</tspan>',
             '<tspan style="font-style: italic" x="' + tab1 + '">Work- and Organisational Psychology, Studies Abroad</tspan>',
             ' ',
             'Aug 2008 - Jun 2011<tspan x="' + tab1 + '">Goethe-University Frankfurt</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '" fill="#CE001C">BSc in Psychology (first-class honours)</tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '" fill="' + colpHigh + '">BSc in Psychology (first-class honours)</tspan>',
             ' '],
 			y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">Skills</tspan>'],          y:stexty[3], yend:0},
 		{t:['Didactics<tspan x="' + tab1 + '">Excellent in presentation techniques and workshop design/moderation</tspan>',
             '<tspan x="' + tab1 + '">Experience in advanced statistics course teaching</tspan>',
             ' ',
-            'Statistics<tspan x="' + tab1 + '">Expertise in <tspan fill="#CE001C">(multivariate) analysis tools</tspan>,</tspan>',
+            'Statistics<tspan x="' + tab1 + '">Expertise in <tspan fill="' + colpHigh + '">(multivariate) analysis tools</tspan>,</tspan>',
             '<tspan x="' + tab1 + '">i.e., structural equation modelling with latent variables and</tspan>',
-			'<tspan x="' + tab1 + '">cross-sectional data categorisation/prediction in <tspan fill="#CE001C">Big Data frameworks</tspan></tspan>',
-			'<tspan x="' + tab1 + '">Professional programming skills in MPlus, <tspan style="font-weight:bold" fill="#CE001C">R</tspan>, SPSS, Stata, and Python</tspan>',
+			'<tspan x="' + tab1 + '">cross-sectional data categorisation/prediction in <tspan fill="' + colpHigh + '">Big Data frameworks</tspan></tspan>',
+			'<tspan x="' + tab1 + '">Professional programming skills in MPlus, <tspan style="font-weight:bold" fill="' + colpHigh + '">R</tspan>, SPSS, Stata, and Python</tspan>',
 			'<tspan x="' + tab1 + '">Working knowledge in LISREL, MAPLE, and SAS</tspan>',
             ' ',
             'EDV Skills<tspan x="' + tab1 + '">All Microsoft Office applications, Windows XP/7/8, Mac OS,</tspan>',
@@ -323,8 +327,8 @@ var stextd = [
             '<tspan x="' + tab1 + '">Experienced cross-hierarchical negotiator, panelist, and speaker</tspan>',
 			'<tspan x="' + tab1 + '"></tspan>',
             ' ',
-			'Languages<tspan x="' + tab1 + '"><tspan fill="#CE001C">German</tspan> (Mother Tongue)</tspan>',
-            '<tspan x="' + tab1 + '"><tspan fill="#CE001C">English</tspan>: Excellent reading, writing, and verbal skills</tspan>',
+			'Languages<tspan x="' + tab1 + '"><tspan fill="' + colpHigh + '">German</tspan> (Mother Tongue)</tspan>',
+            '<tspan x="' + tab1 + '"><tspan fill="' + colpHigh + '">English</tspan>: Excellent reading, writing, and verbal skills</tspan>',
 			'<tspan x="' + tab1 + '">French: Good reading, basic writing, and basic verbal skills</tspan>',
 			'<tspan x="' + tab1 + '">Turkish: Good reading, basic writing, and good verbal skills</tspan>',
             ' '],
@@ -354,7 +358,7 @@ var stextd = [
 			'successfully discriminating between valid responders and invalid responders under',
 			'certain conditions. Indicators for optimal settings of large discriminatory power were',
 			'identified and limitations discussed.', ' ',
-			'(available via: <a xlink:href="http://etheses.lse.ac.uk/3532/" target="_blank" fill="#CE001C">LSE Thesis Online</a>, doi: <a xlink:href="http://dx.doi.org/10.21953/lse.ujium54l0s14" target="_blank" fill="'+colpTitle+'">10.21953/lse.ujium54l0s14</a>, <a xlink:href="./safiles/Terzi_PhD_Thesis.pdf" target="_blank" fill="'+colpTitle+'">local: pdf</a>)'],
+			'(available via: <a xlink:href="http://etheses.lse.ac.uk/3532/" target="_blank" fill="' + colpHigh + '">LSE Thesis Online</a>, doi: <a xlink:href="http://dx.doi.org/10.21953/lse.ujium54l0s14" target="_blank" fill="'+colpTitle+'">10.21953/lse.ujium54l0s14</a>, <a xlink:href="./safiles/Tayfun_Terzi_PhD_Thesis.pdf" target="_blank" fill="'+colpTitle+'">local: pdf</a>)'],
 			y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">MSc Dissertation</tspan>'], y: stexty[3], yend: 0 },
 		{t:['Mediation analysis has been crucial for explaining physiologic as well as psychological',
@@ -374,11 +378,11 @@ var stextd = [
 	[
 		{t:['Engagement'],             y:stexty[0], yend:0},
 		{t:['<tspan style="font-weight:bold">Student Representative</tspan>'],         y:stexty[1], yend:0},
-		{t:['2015 - 2016<tspan x="'+tab1+'"><tspan fill="#CE001C">Elected</tspan> London School of Economics and Political Science</tspan>',
-			'<tspan x="'+tab1+'">Students\' Union (<tspan fill="#CE001C">LSESU</tspan>) Postgraduate</tspan>',
-			' <tspan x="'+tab1+'">Research/<tspan fill="#CE001C">PhD Students\' Officer</tspan></tspan>',
+		{t:['2015 - 2016<tspan x="'+tab1+'"><tspan fill="' + colpHigh + '">Elected</tspan> London School of Economics and Political Science</tspan>',
+			'<tspan x="'+tab1+'">Students\' Union (<tspan fill="' + colpHigh + '">LSESU</tspan>) Postgraduate</tspan>',
+			' <tspan x="'+tab1+'">Research/<tspan fill="' + colpHigh + '">PhD Students\' Officer</tspan></tspan>',
 			' ',
-			'since 2013<tspan x="'+tab1+'">Associate Member of the German Psychological Society (<tspan fill="#CE001C">DGPs</tspan>)</tspan>',
+			'since 2013<tspan x="'+tab1+'">Associate Member of the German Psychological Society (<tspan fill="' + colpHigh + '">DGPs</tspan>)</tspan>',
 			' ',
 			'2013 - 2016<tspan x="'+tab1+'">Student Representative for the </tspan>',
 			' <tspan x="'+tab1+'">Staff-Student Liaison Committee (LSE, PhD, Statistics)</tspan>',
@@ -389,13 +393,13 @@ var stextd = [
 			'2011 - 2013<tspan x="'+tab1+'">Mentor to Graduate Students in need</tspan>',
 			' <tspan x="'+tab1+'">for special Study Arrangements</tspan>',
 			' ',
-			'28 Sept 2011<tspan x="'+tab1+'"><tspan fill="#CE001C">Valedictorian</tspan> as Representative to all Psychology Students</tspan>',
+			'28 Sept 2011<tspan x="'+tab1+'"><tspan fill="' + colpHigh + '">Valedictorian</tspan> as Representative to all Psychology Students</tspan>',
 			' <tspan x="'+tab1+'">at the Goethe-University (Bachelor, Diploma, &amp; PhD Graduates)</tspan>',
 			' ',
 			'Sept 2010<tspan x="'+tab1+'">Speaker and Representative for German Students</tspan>',
 			' <tspan x="'+tab1+'"> at the DGPs Conference in Bremen</tspan>',
 			' ',
-			'2008 - 2013<tspan x="'+tab1+'"><tspan fill="#CE001C">Students\' Council</tspan>, Goethe-University Frankfurt</tspan>',
+			'2008 - 2013<tspan x="'+tab1+'"><tspan fill="' + colpHigh + '">Students\' Council</tspan>, Goethe-University Frankfurt</tspan>',
 			' <tspan x="'+tab1+'">Elected Student Representative and</tspan>',
 			' <tspan x="'+tab1+'">Member entitled to vote for</tspan>',
 			' <tspan x="'+tab1+'">the Students\' Council,</tspan>',
@@ -404,50 +408,63 @@ var stextd = [
 			' <tspan x="'+tab1+'">the Financial Distribution Board,</tspan>',
 			' <tspan x="'+tab1+'">the BSc Examination Board</tspan>'
 			],   y:stexty[2], yend:0},
-		{t:['<tspan style="font-weight:bold" fill="#CE001C">PsyCONNECT</tspan>'],          y:stexty[3], yend:0},
+		{t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">PsyCONNECT</tspan>'],          y:stexty[3], yend:0},
 		{t:['since May 2010<tspan x="'+tab1+'">Founder of the eLearning Project PsyCONNECT</tspan>', ' ',
-			'Online Platform<tspan x="'+tab1+'"><a xlink:href="http://www.psyconnect-frankfurt.de" target="_blank" fill="#CE001C">http://www.psyconnect-frankfurt.de</a></tspan>'
+			'Online Platform<tspan x="'+tab1+'"><a xlink:href="http://www.psyconnect-frankfurt.de" target="_blank" fill="' + colpHigh + '">http://www.psyconnect-frankfurt.de</a></tspan>'
 			],
 		y:stexty[4], yend:0}
         ],
 	[
 		{t:['Awards'],                 y:stexty[0], yend:0},
 		{t:['<tspan style="font-weight:bold">Scholarships</tspan>'],         y:stexty[1], yend:0},
-		{t:['2013 - 2016<tspan x="'+tab1+'">Economic &amp; Social Research Council (<tspan fill="#CE001C">ESRC</tspan>)</tspan>',
-		' <tspan x="'+tab1+'">Advanced Quantitative Methods (<tspan fill="#CE001C">AQM</tspan>) Award</tspan>',
+		{t:['2013 - 2016<tspan x="'+tab1+'">Economic &amp; Social Research Council (<tspan fill="' + colpHigh + '">ESRC</tspan>)</tspan>',
+		' <tspan x="'+tab1+'">Advanced Quantitative Methods (<tspan fill="' + colpHigh + '">AQM</tspan>) Award</tspan>',
 		' <tspan x="'+tab1+'">with full Stipend Scholarship</tspan>', ' ',
-			'2011 - 2013<tspan x="'+tab1+'"><tspan fill="#CE001C">Germany-Scholarship</tspan> Award</tspan>',
+			'2011 - 2013<tspan x="'+tab1+'"><tspan fill="' + colpHigh + '">Germany-Scholarship</tspan> Award</tspan>',
 			],   y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">Prices</tspan>'],          y:stexty[3], yend:0},
-		{t:['Oct 2012<tspan x="'+tab1+'">Nominated for the <tspan fill="#CE001C">United Nations Habitat Future Communication Price</tspan></tspan>', ' ',
-			'since 2010<tspan x="'+tab1+'">Receiver of further funding of approximately <tspan fill="#CE001C">€19,000</tspan> from</tspan>',
+		{t:['Oct 2012<tspan x="'+tab1+'">Nominated for the <tspan fill="' + colpHigh + '">United Nations Habitat Future Communication Price</tspan></tspan>', ' ',
+			'since 2010<tspan x="'+tab1+'">Receiver of further funding of approximately <tspan fill="' + colpHigh + '">€19,000</tspan> from</tspan>',
 			' <tspan x="'+tab1+'">the Directorate of Psychology,</tspan>',
 			' <tspan x="'+tab1+'">the Department of Social Psychology,</tspan>',
 			' <tspan x="'+tab1+'">the interdisciplinary Group for University Didactic,</tspan>',
 			' <tspan x="'+tab1+'">and the Students\' Union</tspan>',  ' ',
 			'2013<tspan x="'+tab1+'">Winner of the Goethe-University Student-eLearning Fund (SeLF)</tspan>',
-			' <tspan x="'+tab1+'">Price with <tspan fill="#CE001C">€4,500</tspan> grant</tspan>', ' ',
-			'2011<tspan x="'+tab1+'">Winner of the SeLF Price with <tspan fill="#CE001C">€8,730</tspan> grant</tspan>', ' ',
-			'2010<tspan x="'+tab1+'">Winner of the SeLF Price with <tspan fill="#CE001C">€10,000</tspan> grant</tspan>'
+			' <tspan x="'+tab1+'">Price with <tspan fill="' + colpHigh + '">€4,500</tspan> grant</tspan>', ' ',
+			'2011<tspan x="'+tab1+'">Winner of the SeLF Price with <tspan fill="' + colpHigh + '">€8,730</tspan> grant</tspan>', ' ',
+			'2010<tspan x="'+tab1+'">Winner of the SeLF Price with <tspan fill="' + colpHigh + '">€10,000</tspan> grant</tspan>'
 			],    y:stexty[4], yend:0}
         ],
 	[
 		{t:['Contact'],                y:stexty[0], yend:0},
-		{t:['<tspan style="font-weight:bold" fill="#CE001C">' + author + ', PhD</tspan>'],         y:stexty[1], yend:0},
-		{t:["°", " ", "°", " ",
-			"°", " ", "°", " ", "°", " ", "°", " ", "°", " ", "°", " ",
-			"°", " ", "°", " ", "°", " ", "°", " ", "°", "°"
-			],   y:stexty[2], yend:0},
+		{t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">' + author + ', PhD</tspan>'],         y:stexty[1], yend:0},
+		{t:[contactWhitespaces + 'LinkedIn', ' ',
+		    contactWhitespaces + '<a xlink:href="https://www.linkedin.com/in/tayfunterzi">https://www.linkedin.com/in/tayfunterzi</a>',
+		    ' ', ' ',
+		    contactWhitespaces + 'Github', ' ', 
+		    contactWhitespaces + '<a xlink:href="https://github.com/tayfunterzi">https://github.com/tayfunterzi</a>',
+		    ' ', ' ',
+		    contactWhitespaces + 'Facebook', ' ', 
+		    contactWhitespaces + '<a xlink:href="https://www.facebook.com/tayfunterzi">https://www.facebook.com/tayfunterzi</a>',
+		    ' ', ' ',
+		    contactWhitespaces + 'Twitter', ' ', 
+		    contactWhitespaces + '<a xlink:href="https://twitter.com/tayfunterzi">https://twitter.com/tayfunterzi</a>',
+		    ' ', ' ',
+		    contactWhitespaces + 'Google+', ' ', 
+		    contactWhitespaces + '<a xlink:href="https://plus.google.com/113954516928013701422">https://plus.google.com/tayfunterzi</a>', 
+		   ],   y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">Signature</tspan>'],          y:stexty[3], yend:0},
-		{t:['<tspan fill="#CE001C">Psychologist</tspan> (BSc, MSc)',
-			'PhD in <tspan fill="#CE001C">Statistics</tspan> (<tspan style="font-weight:bold" fill="#CE001C">L</tspan>ondon <tspan style="font-weight:bold" fill="#CE001C">S</tspan>chool of <tspan style="font-weight:bold" fill="#CE001C">E</tspan>conomics)',
+		{t:['<tspan fill="' + colpHigh + '">Psychologist</tspan> (BSc, MSc)',
+			'PhD in <tspan fill="' + colpHigh + '">Statistics</tspan> (<tspan style="font-weight:bold" fill="' + colpHigh + '">L</tspan>ondon <tspan style="font-weight:bold" fill="' + colpHigh + '">S</tspan>chool of <tspan style="font-weight:bold" fill="' + colpHigh + '">E</tspan>conomics)',
+			' ',
+			'Citymapper - City Operations Hero',
 			' ',
 			'ESRC Advanced Quantitative Methods Award Holder',
 			'Founding Member of Project PsyCONNECT',
 			'Associate Member of the German Society for Psychology (DGPs)',
 			' ',
-			'Personal email: <tspan fill="#CE001C"><a xlink:href="mailto:public@TayfunTerzi.de">public@TayfunTerzi.de</a></tspan>',
-			'Personal website: <tspan fill="#CE001C"><a xlink:href="https://TayfunTerzi.de">https://TayfunTerzi.de</a></tspan>',
+			'Personal email: <a xlink:href="mailto:public@TayfunTerzi.de" fill="' + colpHigh + '">public@TayfunTerzi.de</a>',
+			'Personal website: <a xlink:href="https://TayfunTerzi.de" fill="' + colpHigh + '">https://TayfunTerzi.de</a>',
 			' '
 			],    y:stexty[4], yend:0}
         ]
@@ -525,7 +542,7 @@ ssymb.append('g').attr('id','Ptitles')
             .on('click', function(d,i) {gFoldun(i,false);})
             .on('mouseover', function(d,i) {
 				d3.selectAll('.pTitles').attr('fill','#666666');
-				d3.select(this).attr('fill', '#CE001C');
+				d3.select(this).attr('fill', colpHigh);
                 d3.selectAll('#PKey' + i + ' .pKeywords').attr('fill', colpKeys[1]);
 				d3.selectAll('.tate').attr('fill','#666666');
             })
@@ -593,7 +610,7 @@ var skeywd = [
     [
         {t:'PsyCONNECT',
         l:slined.lyell.p[1], r:45, dx:-9*Gth, dy:-Geg},
-		{t:'Citymapper',
+	{t:'Citymapper',
         l:slined.lyell.p[0], r:45, dx:-8*Gth, dy:-Geg},
         {t:'Python, R, Mplus, SPSS, Stata, HTML/CSS/Javascript, LaTeX, C++',
         l:slined.lyell.p[0], r:45, dx:0, dy:Gth},
@@ -791,9 +808,9 @@ d3.select('#Tfooter').on('click', function() {gFoldun(NaN);});
 var picheight =  stextd[5][2].yend - stextd[5][2].y + Geg
 
 ssymb.select('#SectG5').append('image')
-    .attr('width', function () { return (640 / 427 * picheight); })
+    .attr('width', function () { return (500 / 543 * picheight); })
     .attr('height', function () { return picheight; })
-	.attr('xlink:href', '.'+standA+'/misc/WebSiteProfilePic.jpg')
+	.attr('xlink:href', '.'+standA+'/misc/Tayfun_Terzi_Profile_Picture.jpg')
     .attr('transform', function (d) {
 		return rotati({x:0, y:(stextd[5][1].y + 2 * rGth)}, 0, true);
 		});

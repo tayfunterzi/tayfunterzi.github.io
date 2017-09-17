@@ -9,7 +9,7 @@ author = 'Tayfun Terzi';
 
 var sqWiHei = 700; //SVG and Body Frame Square Frame Size
 
-var standA = ['/standalone', ''][1]
+var standA = ['/standalone', ''][1];
 
 // Set clicked global measures
 var ssymb = d3.select('body')
@@ -47,11 +47,11 @@ ssymb.selectAll('.foots').data([0,1,2,3]).enter()
 	.on('click', function() {
 		gFoldun(NaN);
 		if (gPathsO) {
-			Transpr(0)
-			gPathsO = false
+			Transpr(0);
+			gPathsO = false;
 		} else {
-			Transpr(.35)
-			gPathsO = true
+			Transpr(.35);
+			gPathsO = true;
 		}
 		});
 	
@@ -81,7 +81,7 @@ ssymb.attr('viewBox', '0 0 ' + sqWiHei + ' ' + sqWiHei)
 	;
 
 // Line style properties
-var gl = theight*0.008/sh+','+theight*0.012/sh,     // dashed
+var gl = theight*0.008/sh+','+theight*0.003/sh,     // dashed
     gd = theight*0.003/sh+','+theight*0.003/sh,     // dotted
     gw = theight*0.002/sh+'',                       // stroke-width
     gn = '',                                        // stroke-width
@@ -181,17 +181,17 @@ function rotati(d,deg,us) {
             return 'translate('+sxas(d.x)+','+syas(d.y)+') rotate('+deg+')';
         } else {
             return 'translate('+sxas(d.x)+','+syas(d.y)+') rotate('+deg+')';
-        };
+        }
 }
 
 // Rotation
 function roti(selection, dur) {
-    if (gRotate===false) {return;};
+    if (gRotate===false) {return;}
     selection
     .transition()
     .duration(dur)
     .attr('transform',function(d) {return rotati(d,180);})
-        .on('end', function() {if (gRotate===false) {return;};
+        .on('end', function() {if (gRotate===false) {return;}
             selection
             .transition()
             .duration(dur)
@@ -233,7 +233,7 @@ var stexty = [
 var tab1 = 10*rGth;
 
 var nbsp = '&#160;';
-var halfwidth = Gtw / 2 - Gth 
+var halfwidth = Gtw / 2 - Gth;
 
 var stextd = [
 	[
@@ -497,7 +497,7 @@ d3.select('svg').selectAll('.sectionT')
 							d.yend = d.y + this.getBBox().height + rGeg;
 							nextEl = d.yend;
 							return d.y;
-						};
+						}
                     })
                     ;
             });
@@ -697,14 +697,14 @@ function blowSeq() {
     d3.selectAll('.tate').attr('opacity', 1).attr('font-size', Gth);
     d3.select('#tttext1').transition().duration(2000)
 		.attr('font-size', groW * Gth).attr('opacity', 0)
-        .on('end', function () { if (gHeartB===false) {return;}; blowSeq(); });
+        .on('end', function () { if (gHeartB===false) {return;} blowSeq(); });
     blow('#tttext2', 1000, groW * Gth);
     blow('#tttext3', 500, groW * Gth);
 	} else {
 	d3.selectAll('.foots').attr('opacity', 1).attr('font-size', Gth/2).attr('fill', colpKeys[1]);
     d3.select('#fftext1').transition().duration(2000)
 		.attr('font-size', groW * Gth/2).attr('opacity', 0)
-        .on('end', function () { if (gHeartB===true) {return;}; blowSeq(); });
+        .on('end', function () { if (gHeartB===true) {return;} blowSeq(); });
     blow('#fftext2', 1000, groW * Gth/2);
     blow('#fftext3', 500, groW * Gth/2);	
 	}
@@ -729,7 +729,7 @@ function cFold(pSel) {
             clined.cpink.p[i].x=Gtw-Gth;
             clined.cpink.p[i].y=startP+eveC*mulP*Gth;
         }
-    ;});
+    });
 }
 
 // Fold Lines to Section

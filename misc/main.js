@@ -438,7 +438,7 @@ var stextd = [
 		    '<tspan x="' + halfwidth + '"><a xlink:href="https://twitter.com/tayfunterzi" fill="' + colpTitle + '">https://twitter.com/tayfunterzi</a></tspan>',
 		    nbsp, nbsp,
 		    '<tspan x="' + halfwidth + '">Google+</tspan>', ' ', 
-		    '<tspan x="' + halfwidth + '"><a xlink:href="https://plus.google.com/113954516928013701422" fill="' + colpTitle + '">https://plus.google.com/tayfunterzi</a></tspan>', 
+		    '<tspan x="' + halfwidth + '"><a xlink:href="https://plus.google.com/+tayfunterzi" fill="' + colpTitle + '">https://plus.google.com/+tayfunterzi</a></tspan>', 
 		   ],   y:stexty[2], yend:0},
 		{t:['<tspan style="font-weight:bold">Signature</tspan>'],          y:stexty[3], yend:0},
 		{t:['<tspan fill="' + colpHigh + '">Psychologist</tspan> (BSc, MSc)',

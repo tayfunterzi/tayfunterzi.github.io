@@ -241,7 +241,7 @@ var stextd = [
         {t:['<tspan style="font-weight:bold">Experience</tspan>'],         y:stexty[1], yend:0},
         {t: [
             'since Apr 2019<tspan x="' + tab1 + '">Google DeepMind</tspan>',
-            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">Senior Research Engineer</tspan></tspan>',
+            '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">Staff Research Engineer</tspan></tspan>',
             ' ',
             'Jun 2017 - Apr 2019<tspan x="' + tab1 + '">Citymapper</tspan>',
             '<tspan style="font-style: italic" x="' + tab1 + '"><tspan fill="' + colpHigh + '">Software Engineer</tspan></tspan>',
@@ -444,7 +444,7 @@ var stextd = [
            ],   y:stexty[2], yend:0},
         {t:['<tspan style="font-weight:bold">Signature</tspan>'],          y:stexty[3], yend:0},
         {t:[
-            '<tspan fill="' + colpHigh + '">Senior Research Engineer</tspan> - Google DeepMind',
+            '<tspan fill="' + colpHigh + '">Staff Research Engineer</tspan> - Google DeepMind',
             'PhD in <tspan fill="' + colpHigh + '">Statistics</tspan> - <tspan style="font-weight:bold" fill="' + colpHigh + '">L</tspan>ondon <tspan style="font-weight:bold" fill="' + colpHigh + '">S</tspan>chool of <tspan style="font-weight:bold" fill="' + colpHigh + '">E</tspan>conomics',
             ' ',            
             'ESRC Advanced Quantitative Methods Award Holder',
@@ -608,7 +608,7 @@ var skeywd = [
         l:slined.lyell.p[2], r:-45, dx:9.4*Gth, dy:2*Geg},
         {t:'Software Engineer',
         l:slined.ldgre.p[0], r:0, dx:6.5*Gth, dy:2*Geg},
-        {t:'Senior',
+        {t:'Staff',
         l:slined.lturq.p[2], r:-45, dx:12*Gth, dy:-Geg},
         {t:'Research Engineer',
         l:slined.lturq.p[2], r:-45, dx:12*Gth, dy:2*Geg},

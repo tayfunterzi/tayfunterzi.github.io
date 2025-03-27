@@ -308,16 +308,16 @@ var stextd = [
             '<tspan x="' + tab1 + '">Professional programming skills in <tspan fill="' + colpHigh + '">Python, C++</tspan>, and <tspan fill="' + colpHigh + '">R</tspan></tspan>',
             '<tspan x="' + tab1 + '">Working knowledge in SPSS, Stata, MPlus, LISREL, MAPLE, and SAS</tspan>',
             ' ',
-            'EDV Skills<tspan x="' + tab1 + '">Microsoft Office, Windows XP/7/8/10, Mac OS, Ubuntu/Linux</tspan>',
-            '<tspan x="' + tab1 + '">Adobe Dreamweaver, Photoshop, Premiere, Illustrator, and LaTex</tspan>',
+            'Software<tspan x="' + tab1 + '">Microsoft Office, Windows, Mac OS, Ubuntu/Linux</tspan>',
+            '<tspan x="' + tab1 + '">Adobe Photoshop, Illustrator, and LaTex</tspan>',
             ' ',
             'Communication<tspan x="' + tab1 + '">Experienced in the acquisition of project funding,</tspan>',
             '<tspan x="' + tab1 + '">start-up coordination, and team work</tspan>',
             '<tspan x="' + tab1 + '">Experienced cross-hierarchical negotiator, panelist, and speaker</tspan>',
             '<tspan x="' + tab1 + '"></tspan>',
             ' ',
-            'Languages<tspan x="' + tab1 + '"><tspan fill="' + colpHigh + '">German</tspan> (Mother Tongue)</tspan>',
-            '<tspan x="' + tab1 + '"><tspan fill="' + colpHigh + '">English</tspan>: Excellent reading, writing, and verbal skills</tspan>',
+            'Languages<tspan x="' + tab1 + '"><tspan fill="' + colpHigh + '">German</tspan>: Native</tspan>',
+            '<tspan x="' + tab1 + '"><tspan fill="' + colpHigh + '">English</tspan>: Near-native</tspan>',
             '<tspan x="' + tab1 + '">French: Good reading, basic writing, and basic verbal skills</tspan>',
             '<tspan x="' + tab1 + '">Turkish: Good reading, basic writing, and good verbal skills</tspan>',
             ' '],
@@ -397,11 +397,8 @@ var stextd = [
             ' <tspan x="'+tab1+'">the Financial Distribution Board,</tspan>',
             ' <tspan x="'+tab1+'">the BSc Examination Board</tspan>'
             ],   y:stexty[2], yend:0},
-        {t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">PsyCONNECT</tspan>'],          y:stexty[3], yend:0},
-        {t:['since May 2010<tspan x="'+tab1+'">Founder of the eLearning Project PsyCONNECT</tspan>', ' ',
-            'Online Platform<tspan x="'+tab1+'"><a xlink:href="http://www.psyconnect-frankfurt.de" target="_blank" fill="' + colpHigh + '">http://www.psyconnect-frankfurt.de</a></tspan>'
-            ],
-        y:stexty[4], yend:0}
+        {t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">PsyCONNECT</tspan>'],              y:stexty[3], yend:0},
+        {t:['2010 - 2017<tspan x="'+tab1+'">Founder of the eLearning Project PsyCONNECT</tspan>'],   y:stexty[4], yend:0}
         ],
     [
         {t:['Awards'],                 y:stexty[0], yend:0},
@@ -431,7 +428,7 @@ var stextd = [
             '<tspan x="' + halfwidth + '"><a xlink:href="https://www.linkedin.com/in/tayfunterzi" fill="' + colpTitle + '">https://www.linkedin.com/in/tayfunterzi</a></tspan>',
             nbsp,
             '<tspan x="' + halfwidth + '">Google Scholar</tspan>', ' ', 
-            '<tspan x="' + halfwidth + '"><a xlink:href="https://scholar.google.com/citations?user=ZznRucgAAAAJ" fill="' + colpTitle + '">https://scholar.google.com/citations...</a></tspan>',
+            '<tspan x="' + halfwidth + '"><a xlink:href="https://scholar.google.com/citations?user=gWeDzwoAAAAJ" fill="' + colpTitle + '">https://scholar.google.com/citations...</a></tspan>',
             nbsp,
             '<tspan x="' + halfwidth + '">Github</tspan>', ' ', 
             '<tspan x="' + halfwidth + '"><a xlink:href="https://github.com/tayfunterzi" fill="' + colpTitle + '">https://github.com/tayfunterzi</a></tspan>',

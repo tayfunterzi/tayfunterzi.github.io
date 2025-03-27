@@ -431,7 +431,7 @@ var stextd = [
             '<tspan x="' + halfwidth + '"><a xlink:href="https://www.linkedin.com/in/tayfunterzi" fill="' + colpTitle + '">https://www.linkedin.com/in/tayfunterzi</a></tspan>',
             nbsp,
             '<tspan x="' + halfwidth + '">Google Scholar</tspan>', ' ', 
-            '<tspan x="' + halfwidth + '"><a xlink:href="https://scholar.google.com/citations?user=ZznRucgAAAAJ" fill="' + colpTitle + '">https://scholar.google.com/citations...</a></tspan>',
+            '<tspan x="' + halfwidth + '"><a xlink:href="https://scholar.google.com/citations?user=gWeDzwoAAAAJ" fill="' + colpTitle + '">https://scholar.google.com/citations...</a></tspan>',
             nbsp,
             '<tspan x="' + halfwidth + '">Github</tspan>', ' ', 
             '<tspan x="' + halfwidth + '"><a xlink:href="https://github.com/tayfunterzi" fill="' + colpTitle + '">https://github.com/tayfunterzi</a></tspan>',

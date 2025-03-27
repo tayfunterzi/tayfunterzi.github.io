@@ -397,11 +397,8 @@ var stextd = [
             ' <tspan x="'+tab1+'">the Financial Distribution Board,</tspan>',
             ' <tspan x="'+tab1+'">the BSc Examination Board</tspan>'
             ],   y:stexty[2], yend:0},
-        {t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">PsyCONNECT</tspan>'],          y:stexty[3], yend:0},
-        {t:['since May 2010<tspan x="'+tab1+'">Founder of the eLearning Project PsyCONNECT</tspan>', ' ',
-            'Online Platform<tspan x="'+tab1+'"><a xlink:href="http://www.psyconnect-frankfurt.de" target="_blank" fill="' + colpHigh + '">http://www.psyconnect-frankfurt.de</a></tspan>'
-            ],
-        y:stexty[4], yend:0}
+        {t:['<tspan style="font-weight:bold" fill="' + colpHigh + '">PsyCONNECT</tspan>'],              y:stexty[3], yend:0},
+        {t:['2010 - 2017<tspan x="'+tab1+'">Founder of the eLearning Project PsyCONNECT</tspan>'],   y:stexty[4], yend:0}
         ],
     [
         {t:['Awards'],                 y:stexty[0], yend:0},
